@@ -1,0 +1,15 @@
+<div class="col-12">
+	<div class="row">
+		<div class="girlsItem">
+			<ul class="row">
+				<h3>Summer Collection</h3>
+				<li class="card col-12" *ngFor="let item of girlsService.items">
+					<app-girls-view [item]="item"></app-girls-view>
+				</li>
+			</ul>
+		</div>
+		<div class="girlsAddItem">
+			<app-girls-add (addedItem)="addedItem($event)"></app-girls-add>
+		</div>
+	</div>
+</div>
